@@ -1,5 +1,5 @@
-#include "macros.h"
-#include "Vector3D.h"
+#include "macros.hh"
+#include "Vector3D.hh"
 
 void write_data_to_log (ICM_20948 *sensor, Vector3D vector){
     //vector is the velocity vector

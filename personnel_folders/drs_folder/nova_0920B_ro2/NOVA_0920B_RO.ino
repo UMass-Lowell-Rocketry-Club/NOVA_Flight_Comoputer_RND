@@ -1,5 +1,6 @@
-#include "macros.h"
-#include "Vector3D.h"
+#include "macros.hh"
+#include "Vector3D.hh"
+#include "SurfaceCommandsQueue.hh"
 void setup() {
         //Use this section of code for any variables, objects, etc, which are going to be used in the loop() section
         bool computer_active = true;
@@ -8,6 +9,7 @@ void setup() {
         int flight_computer_begin_tick_time = 0;
         int flight_computer_after_tick_time = 0;
         Vector3D velocity_vector;
+        SurfaceCommandsQueue commands_queue;
         //Put setup only code beneath here, that is code that is meant to run on the first tick of the program only.
         FastLED.addLeds<NUM_STRIPS,CHIPSET,DATA_PIN,COLOR_ORDER>(leds,NUM_LEDS).setCorrection(TypicalLEDStrip);
         FastLED.setBrightness(Bright);
@@ -163,6 +165,16 @@ void loop() {
         }
 
         /*
+        This will call a function to get an integer code which represents a command from the ground.
+        */
+        int codes = 0;
+        do{
+            commands_queue.accept_code_input(codes);
+            //codes = getCommandCodesFromReciever(); //is zero if and only if no transmission is detected
+        } while(codes != 0);
+        
+
+        /*
         Everything above this comment was dedicated to collecting data and preforming rocket functions based on that data.
         everything below this comment was dedicated to storing that data and transmiting that data. 
         */ 
@@ -171,8 +183,9 @@ void loop() {
         write_data_to_log(&myICM, velocity_vector); //I put here before updating the MET only because the data was calculated based on the previous met value
         update_met(); flight_computer_after_tick_time = MET; //Recall that MET is in the macro folder, this updates it and then sets the time to the MET. 
         //We check if the computation time of the flight computer up to now since the last tick has exceeded what we consider ideal, if it has we only send a partial 
-        //data packet, if it has not we send a full data packet. 
-        if( ( flight_computer_after_tick_time - flight_computer_begin_tick_time ) > IDEAL_TICK_COMPUTATION_TIME_IN_MILLIS){ 
+        //data packet, if it has not we send a full data packet.
+
+        if( ((flight_computer_after_tick_time - flight_computer_begin_tick_time) > IDEAL_TICK_COMPUTATION_TIME_IN_MILLIS) || commanded_to_send_less_data){ 
             transmit_data_to_ground_partial_packet();
         }
         else{

@@ -1,8 +1,14 @@
+#ifndef MACROS
+#define MACROS
 /*
  * Include Statements
  */
 #include <string>
 #include <vector>
+//If you are having issues with the include statements and just want to code in c++ without dealing with (most) of the arduino libraries
+//comment everything beneat this line until you see the next comment with the appropriate mention. 
+
+
 #include <FastLED.h>                                  //FastLED library
 #include "ICM_20948.h"
 #include <SPI.h>
@@ -37,6 +43,10 @@ File card;
 CRGB leds[NUM_LEDS];
 ICM_20948_I2C myICM;
 BME280I2C bme;
+
+
+
+//End commenting out stuff here
 double dt1 = 0;
 double dt2 = 0;
 double launch_time_in_milliseconds = 0; 
@@ -44,3 +54,6 @@ double MET = 0;
 
 double detect = 0;
 bool btnon = false;
+bool commanded_to_send_less_data = false;
+
+#endif

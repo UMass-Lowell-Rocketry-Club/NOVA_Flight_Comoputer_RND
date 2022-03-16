@@ -1,3 +1,5 @@
+#ifndef VECTOR_3D
+#define VECTOR_3D
 class Vector3D {
 
   private:
@@ -37,3 +39,4 @@ class Vector3D {
         return z_coordinate;
     }
 };
+#endif

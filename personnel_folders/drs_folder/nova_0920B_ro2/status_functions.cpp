@@ -1,10 +1,10 @@
+#include "macros.hh"
+#include "Vector3D.hh"
 /*
 File contains code for functions which either set the rocket into a specific status, or detect if some external events have triggered.
 */
 
 //This function is meant to take sensor data and then calculate if the order to launch was given, regardless of if a launch occured or not.
-#include "macros.h"
-#include "Vector3D.h"
 bool get_launch_directive_status(ICM_20948 *sensor){
     myICM.getAGMT();
     detect = sensor->accZ();
