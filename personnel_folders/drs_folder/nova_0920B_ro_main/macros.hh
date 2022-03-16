@@ -9,13 +9,13 @@
 //comment everything beneat this line until you see the next comment with the appropriate mention. 
 
 
-// #include <FastLED.h>                                  //FastLED library
-// #include "ICM_20948.h"
-// #include <SPI.h>
-// #include <SD.h>
-// #include "ICM_20948.h"
-// #include <BME280I2C.h>
-// #include <Wire.h>
+#include <FastLED.h>                                  //FastLED library
+#include "ICM_20948.h"
+#include <SPI.h>
+#include <SD.h>
+#include "ICM_20948.h"
+#include <BME280I2C.h>
+#include <Wire.h>
 
 /*
  * Macro Defintions and consts
