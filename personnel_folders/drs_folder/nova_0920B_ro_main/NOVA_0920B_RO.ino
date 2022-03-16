@@ -147,7 +147,7 @@ Code executed during main flight of the rocket is below
 
 void loop() {
     flight_active = get_launch_directive_status(&myICM); //Checks to see if a launch happened
-    if(computer_active && flight_active){
+    if(computer_active && flight_active){ //Having these both is important because we may pick up the rocket after has landed, which will trigger the accelerometer, and we don't want it to think its in flight again and start writing to the log again.
         update_met(); flight_computer_begin_tick_time = MET; //Recall that MET is in the macro, this updates it and then sets the time to the MET. 
         //Dereferances myICM and preforms member selection to get acceleration. Using it this way because that is how it is down in the old CFL function I deleted.
         velocity_vector.set_x_cord(velocity_vector.get_x_cord()+ get_adjusted_acceleration((&myICM)->accX()) );
