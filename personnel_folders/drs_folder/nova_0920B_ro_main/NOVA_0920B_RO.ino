@@ -10,6 +10,7 @@ void setup() {
         int flight_computer_after_tick_time = 0;
         Vector3D velocity_vector;
         SurfaceCommandsQueue commands_queue;
+        array_of_addresses_of_command_functions = surface_to_rocket_commands::setup_vector_command_function_addresses();
         //Put setup only code beneath here, that is code that is meant to run on the first tick of the program only.
         FastLED.addLeds<NUM_STRIPS,CHIPSET,DATA_PIN,COLOR_ORDER>(leds,NUM_LEDS).setCorrection(TypicalLEDStrip);
         FastLED.setBrightness(Bright);

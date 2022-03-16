@@ -2,6 +2,8 @@
 #define SURFACE_COMMANDS_QUEUE
 #include "FunctionQueue.hh"
 #include "surface_to_rocket_commands.hh"
+#include "macros.hh"
+
 class SurfaceCommandsQueue {
 
   private:

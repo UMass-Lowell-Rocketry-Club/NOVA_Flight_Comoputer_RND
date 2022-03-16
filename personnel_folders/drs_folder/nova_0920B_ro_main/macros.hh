@@ -9,13 +9,13 @@
 //comment everything beneat this line until you see the next comment with the appropriate mention. 
 
 
-#include <FastLED.h>                                  //FastLED library
-#include "ICM_20948.h"
-#include <SPI.h>
-#include <SD.h>
-#include "ICM_20948.h"
-#include <BME280I2C.h>
-#include <Wire.h>
+// #include <FastLED.h>                                  //FastLED library
+// #include "ICM_20948.h"
+// #include <SPI.h>
+// #include <SD.h>
+// #include "ICM_20948.h"
+// #include <BME280I2C.h>
+// #include <Wire.h>
 
 /*
  * Macro Defintions and consts
@@ -35,6 +35,7 @@ const double IDEAL_TICK_COMPUTATION_TIME_IN_MILLIS = 10; //idk whatever number w
 const double 
 const double z_axis_acceleration_indicating_launch = 2500.0; 
 const string data_log_file_name = "Flight.txt"; //I see that string isn't working here, idk why. 
+std::vector<void (*)()> array_of_addresses_of_command_functions;
 
 /*
  * Global Variables
