@@ -1,0 +1,29 @@
+NVOA Flight Histories and summaries
+Flgiht data (i.e CSV's. will not be stored on this file, the exemption is estimated or messured altitude of rocket)
+
+
+Flight 1 May 2021
+	NOVA V3 on a water rocket, estimated altitude of 60m (180ft)
+	Rocket Underperformance and a long timer lead to the parachute being deployed 30ft above the ground
+	a wire off the IMU needed to be resoldered
+
+Flight 2 June 2021
+	NOVA V3 on a small estes rocket (BIOHAZARD), Est. Alt. of 75m (225ft)
+	failure to log data, possible power failure due to battery not being charged
+	
+Flight 3 November 2021
+	NOVA V5 on Aquila II (LVL 1 CERT Attempt) Messured alt. of 986 ft, unsure of actual due to data corupution 
+	Due to the parachute being packed loose and being tight against the air frame the parachute failed to deploy and the rocket maintained a ballistic trajectory
+	NOVA V5 underwent a rapid and unscheduled dissasembly resulting in the components being removed from the motherboard and thrown around.
+	the uSD cards, Teensy 4.0, IMU, and RCS3L were all recovered
+	RCS3L was twisted and when attemped to be powered back on, showed no signs of life
+		It's uSD card heats up tremendously when plugged in and shows a size of 31MB
+	NOVA's uSD was recovered with no Internal damage but missing 6 seconds of flight data (assuming the boost phase looking at the data but could be a different phase)
+	
+		update: A coding issue was found where the launch detection value was set to 3.5g and not 2.5g, even if the value was set correctly it still would be to high for effective detection (fixed 0.9.20C)
+	
+FLight 4 January 2022
+	NOVA v5.1 - 75 on Minihawk I Estimated altitude of 300ft
+	power failure 50ms into flight due to power delivery board becoming detached (fixxed NOVA V5.1-75.2)
+	Minihawk damaged due to bad dimentions on 3DP parts
+	

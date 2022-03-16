@@ -1,0 +1,85 @@
+NOVA HARDWARE HISTORY
+
+NOVA V1 - V4 were on a 25mm x 25mm base and were roughly 50mm tall
+NOVA V5 35 x 40 mm perfboard
+
+
+NOVA V1
+	Never Left CAD
+  
+NOVA V2
+	Bread Board Model
+	Components
+		Arduino Nano (ATMEGA 328p)
+    	ICM-20948
+    	Servo
+    
+NOVA V3
+    First Flown Version
+    components
+    	Arduino Nano (ATMEGA 328p)
+    	ICM-20948 
+    	BME280
+    	uSD card
+    	Servo
+    goal
+    	detect Launch and use servo to deploy a parachute from a water rocket
+  	Flight History
+    	Flight 1 - Partial Failure
+      		lower than expected flight pressure led to shorter time to Apogee, parachute deployed roughly 40 ft above ground destroying the parachute and 
+			damaging the flight computer
+    	Flight 2 - Failure
+      		Data Failed to save to uSD card
+      
+NOVA V4
+    Scrapped
+    components
+    	Teensy 4.0
+    	ICM-20948
+    	BME280
+    	uSD
+    	HC-05 BT
+    notes
+    	size limitations and terrible wiring led to the package not working in the configuration it was currently in.
+    
+NOVA V5
+    Partially destroyed
+    components
+    	teensy 4.0
+    	ICM-20948
+    	BME280
+    	uSD
+    	RunCam Split 3 Lite
+    notes
+    	repackaged to fit together differently
+    	first version to use perfboard and header pins to attach components
+    	added on-board camera
+    Scheduled Flights
+    	Flight 1 - Aquila II, H54, HPR L1 CERT
+    	
+    Flight History
+        Flight 1, Failure, parachute deployment failure unrealted to system
+
+NOVA V5.1
+   IN-DEV
+   Components
+        Teensy 4.0 MPU
+        ICM-20948 IMU
+        UNKNOWN new barometer
+        uSD
+   Notes
+        Avonics package designs not going to be considered a new version if harware remains the same
+	using pin header jumper to power board
+	multiple boards packed together
+   Current Packages
+        NOVA 75
+             75 x 150
+             75mm cage
+	NOVA 75.2
+	     75 x 120
+	     75mm cage
+        
+   Scheduled Launches and Dates
+   	LATS Flight 2, Minihawk Ib E30-4t NOVA v5.1-75.2
+	LAtS Flight 3, Minihawk Ib F50-6t NOVA v5.1-75.2
+	

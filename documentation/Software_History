@@ -1,0 +1,31 @@
+Code Versions up to V17 have been designated beta builds, starting at 0.9.1 ending at current 0.9.20B
+
+planned versions and features
+	Version 1.0.0 - Spring 2021 Pyro and servo channels for Parachute deployment and back up Parachute, adding telemetry and GPS tracking.
+
+
+
+0.9.10
+	Last version of code that was saved
+	NOVA V3 - Servotimer and basic logging.
+	
+
+0.9.17
+	Last Version of dumb code
+		(lost when hard drive corrupted)
+
+0.9.18
+	Bench Test Version
+	was built incrementally to test components.
+	
+9.20.0
+	DATA LOGGING SYSTEM
+	First to use dead reconing integration to estimate speed and position
+	Running on NOVA V5
+	Patch notes from 0.9.17
+		+ Flight states
+		+ Mission lockout time 
+		+ "mission planning" through flight states
+			using flight states to acknoledge what stage of flight rocket is in
+	
+			

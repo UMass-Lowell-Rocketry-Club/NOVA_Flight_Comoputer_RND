@@ -1,0 +1,16 @@
+1. Powerpoint for alderete
+2. Find chips for LoRa radio (transmitter and reciever or dual use chips)
+3. Find chips for GPS/ GNSS (find chips that are "unlocked")
+4. ADXL375 (https://www.adafruit.com/product/5374)
+
+
+List of systems
+NOVA - Flight computer
+Secondary on-board beacon
+Ground computer
+Ground tracking camera
+
+Devon's Comments:
+1. See if my edits to NOVA_0920B found in the NOVA_0920B_RO.ino file compile fine. If they do, commit them to SRC. Im not trying to write them to be compliant with the guidelines yet, just get them into a more readable state before we make the next version of the flight computer.
+2. If everyone is okay with it can we please keep SRC only for the most up to date files and create a secondary folder for older versions? 
+Please Indicate here if you are okay with that: 
