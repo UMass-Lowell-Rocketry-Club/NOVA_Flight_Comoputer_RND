@@ -17,3 +17,7 @@ void acknowledge_command_recieved(){
     //Implement code to send down a message that the rocket recieved a command
 }
 
+std::vector setup_vector_command_function_addresses(){
+    //Not implemented yet because more needs to be tested.
+}
+
