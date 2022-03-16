@@ -18,71 +18,73 @@ void acknowledge_command_recieved(){
 }
 
 std::vector<void (*)()> setup_vector_command_function_addresses(){
-    std::vector<void (*)()> command_function_addresses (20);
-    for(int i = 0; i < 20; i++){
+    std::vector<void (*)()> command_function_addresses;
+    int i = 0;
+    while(i<20){
         if(i == 0){
-            command_function_addresses.at(i) = NULL;
+            command_function_addresses.push_back(nullptr);
         }
         else if(i == 1){
-            command_function_addresses.at(i) = &surface_to_rocket_commands::test_transmission;
+            command_function_addresses.push_back(&surface_to_rocket_commands::test_transmission);
         }
         else if(i == 2){
-            command_function_addresses.at(i) = NULL;
+            command_function_addresses.push_back(nullptr);
         }
         else if(i == 3){
-            command_function_addresses.at(i) = NULL;
+            command_function_addresses.push_back(nullptr);
         }
         else if(i == 4){
-            command_function_addresses.at(i) = NULL;
+            command_function_addresses.push_back(nullptr);
         }
         else if(i == 5){
-            command_function_addresses.at(i) = NULL;
+            command_function_addresses.push_back(nullptr);
         }
         else if(i == 6){
-            command_function_addresses.at(i) = NULL;
+            command_function_addresses.push_back(nullptr);
         }
         else if(i == 7){
-            command_function_addresses.at(i) = NULL;
+            command_function_addresses.push_back(nullptr);
         }
         else if(i == 8){
-            command_function_addresses.at(i) = NULL;
+            command_function_addresses.push_back(nullptr);
         }
         else if(i == 9){
-            command_function_addresses.at(i) = NULL;
+            command_function_addresses.push_back(nullptr);
         }
         else if(i == 10){
-            command_function_addresses.at(i) = NULL;
+            command_function_addresses.push_back(nullptr);
         }
         else if(i == 11){
-            command_function_addresses.at(i) = NULL;
+            command_function_addresses.push_back(nullptr);
         }
         else if(i == 12){
-            command_function_addresses.at(i) = NULL;
+            command_function_addresses.push_back(nullptr);
         }
         else if(i == 13){
-            command_function_addresses.at(i) = NULL;
+            command_function_addresses.push_back(nullptr);
         }
         else if(i == 15){
-            command_function_addresses.at(i) = NULL;
+            command_function_addresses.push_back(nullptr);
         }
         else if(i == 16){
-            command_function_addresses.at(i) = NULL;
+            command_function_addresses.push_back(nullptr);
         }
         else if(i == 17){
-            command_function_addresses.at(i) = NULL;
+            command_function_addresses.push_back(nullptr);
         }
         else if(i == 18){
-            command_function_addresses.at(i) = NULL;
+            command_function_addresses.push_back(nullptr);
         }
         else if(i == 19){
-            command_function_addresses.at(i) = NULL;
+            command_function_addresses.push_back(nullptr);
         }
         else if(i == 20){
-            command_function_addresses.at(i) = NULL;
+            command_function_addresses.push_back(nullptr);
         }
         else{
            //Nothing
         }
+        i++;
     }
     return command_function_addresses;
     
