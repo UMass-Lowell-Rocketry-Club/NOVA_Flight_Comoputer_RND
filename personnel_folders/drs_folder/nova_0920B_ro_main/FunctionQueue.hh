@@ -15,7 +15,9 @@ class FunctionQueue {
 
 
     void add_to_queue(void (*funcptr)()) {
-      queue.push_back(funcptr);
+      if(*funcptr != nullptr){ //Some functions may be undefined, as a consequence they are currently set as nullptr, and we need to be sure that none have that issue before trying to run them.
+        queue.push_back(funcptr);
+      }
     }
 
     void service_queue() {

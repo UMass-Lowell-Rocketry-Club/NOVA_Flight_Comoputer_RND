@@ -20,7 +20,7 @@ void acknowledge_command_recieved(){
 std::vector<void (*)()> setup_vector_command_function_addresses(){
     std::vector<void (*)()> command_function_addresses;
     int i = 0;
-    while(i<20){
+    while(i<num_of_command_functions){
         if(i == 0){
             command_function_addresses.push_back(nullptr);
         }
@@ -76,9 +76,6 @@ std::vector<void (*)()> setup_vector_command_function_addresses(){
             command_function_addresses.push_back(nullptr);
         }
         else if(i == 19){
-            command_function_addresses.push_back(nullptr);
-        }
-        else if(i == 20){
             command_function_addresses.push_back(nullptr);
         }
         else{

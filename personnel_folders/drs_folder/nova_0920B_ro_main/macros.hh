@@ -31,10 +31,12 @@
 #define btn 3                                         //Button
 #define WIRE_PORT Wire
 #define AD0_VAL 1
+#define I32_SIZE sizeof(signed int) * 8
 const double IDEAL_TICK_COMPUTATION_TIME_IN_MILLIS = 10; //idk whatever number works best. 
 const double 
 const double z_axis_acceleration_indicating_launch = 2500.0; 
 const string data_log_file_name = "Flight.txt"; //I see that string isn't working here, idk why. 
+const num_of_command_functions = 20;
 std::vector<void (*)()> array_of_addresses_of_command_functions;
 
 /*

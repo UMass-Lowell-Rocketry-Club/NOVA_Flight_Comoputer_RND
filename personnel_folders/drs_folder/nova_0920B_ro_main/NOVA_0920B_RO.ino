@@ -168,8 +168,8 @@ void loop() {
         /*
         This will call a function to get an integer code which represents a command from the ground.
         */
-        int codes = 0;
-        do{
+        int codes = surface_to_rocket_commands::getCommandCodesFromReciever();
+        if(surface_to_rocket_commands::check_if_code_is_valid(codes))
             commands_queue.accept_code_input(codes);
             //codes = getCommandCodesFromReciever(); //is zero if and only if no transmission is detected
         } while(codes != 0);
