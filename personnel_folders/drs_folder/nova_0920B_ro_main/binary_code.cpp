@@ -8,5 +8,5 @@ int mask(int value, int index) {
     if(index >= I32_SIZE || index < 0){
         return nullptr;
     }
-  return 0 != (value & (1 << index));
+    return 0 != (value & (1 << index));
 }
